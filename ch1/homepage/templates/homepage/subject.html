@@ -1,0 +1,119 @@
+{% extends "homepage/base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>            
+            article #adiv #wrap1{
+                width:68%;
+                margin: 0 auto;
+            }
+            article #adiv #adiv1{
+                display: inline-block;
+                padding: 15px 0;
+            }
+            article #adiv #adiv2 {
+                float: right;
+                padding: 15px 0;
+            }
+            article #adiv #adiv2 ul{
+                display: flex;
+                list-style: none;
+                padding-top:5px;
+            }
+            article #adiv #adiv2 ul li{
+                margin-left: 20px;
+            }
+            article #adiv .과목{
+                text-align: center;
+            }
+            article #adiv .과목 h1{
+                padding-bottom: 30px;
+                font-size: 34px;
+            }
+            article #adiv .과목 > div{
+                padding: 60px 0;
+            }
+            article #adiv #공통과목 #공통box{
+                display: flex;
+                border: 1px solid gray;
+                padding: 40px;
+                justify-content: space-around;
+                margin-top:40px;
+                width: 60%;
+                margin: 40px  auto 0 auto;
+            }
+            article #adiv #공통과목 #공통box div{
+                border: 1px solid gray;
+            }
+            article #adiv .과목 #해커톤{
+                background-color: rgb(248,248,248);
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <div id="adiv">
+                <div id="wrap1">
+                    <div id="adiv1">
+                        <h1>교과안내</h1>
+                    </div>
+                    <div id="adiv2">  
+                        <ul>
+                            <li>교과안내</li>
+                            <li>전공수업</li>
+                        </ul>
+                    </div>
+                    <hr>
+                </div>
+                <div class="과목">
+                    <div id="공통과목">
+                        <h1>공통과목</h1>
+                        <p>
+                                보통교과수업과 인성교육을 중심으로 개발된 본교만의 교양교과목은<br>
+                                예술인으로서 지녀야할 지식과 인성, 철학과 감성을 효과적으로 전달할 수 있는 뒷받침이 되도록 교육합니다.<br><br>
+                                
+                                또한 사회에 공헌하는 예술인을 위해 특화된 영어수업으로 문화의 폭을 넓히고 글로벌 감각을 지닌 예술인을 양성합니다.<br>
+                        </p>
+                        <div id="공통box">
+                            <div id="코딩">
+                                <h2>코딩</h2>
+                                <img src="img/성경.png">
+                            </div>
+                            <div id="디자인">
+                                <h2>디자인</h2>
+                            </div>
+                            <div id="영어">
+                                <h2>영어</h2>
+                            </div>
+                            <div id="성경">
+                                <h2>성경</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="과목">
+                    <div id="해커톤">
+                        <h1>해커톤 및 각종 대회 참가</h1>
+                        <p>
+                            4차 산업혁명 시대에 대체 불가능하며 가장 중요시 되는 것은 창의력입니다.<br>
+                            창의수업을 바탕으로 예술가(Artist)에서 크리에이터(Creator)로 성장시키는 넒은 시야와 문화예술의 다양한 폭을<br>
+                            예술산업 현장에서 활발히 활동 중인 선생님들을 통해 교육 받게 됩니다.<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="과목">
+                    <div id="실무">
+                        <h1>외주, 실무 프로젝트</h1>
+                        <p>
+                            실무형 중심의 프로젝트를 수행함으로서 돈도 벌고 <br>
+                            실무 능력을 쌓는데에 집중한다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </body>
+</html>
+{% endblock %}
