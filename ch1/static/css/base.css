@@ -26,6 +26,9 @@
                 text-decoration: none;
                 color: white;
             }
+            article{
+                clear:both;
+            }
             footer{
                 clear: both;
                 background-color: rgb(15,58,114);
@@ -40,7 +43,7 @@
                 padding-bottom: 10px;
             }
             footer #fdiv .fdiv{
-                margin-right: 80px;
+                margin-right: 120px;
             }
             footer #fdiv .fdiv li{
                 list-style: none;
@@ -53,4 +56,8 @@
             footer #fdiv #ffdiv p{
                 padding: 20px 0; font-size:14px;
                 color: gray;
+            }
+            footer #fdiv #wrap .fdiv a{
+                color: white;
+                text-decoration: none;
             }

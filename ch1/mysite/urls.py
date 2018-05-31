@@ -17,17 +17,16 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from django.shortcuts import render
 from django.shortcuts import redirect
+from . import views
 
 
 
-def root(request):
-    return redirect('homepage:home')
 
 
 urlpatterns = [
     url('admin/', admin.site.urls),
 
     # 리다이렉션
-    url(r'^$', root, name='root'),
-    url(r'^homepage/', include('homepage.urls', namespace='homepage')),
+    url(r'^$', views.home),
+    url(r'^', include('homepage.urls', namespace='homepage')),
 ]

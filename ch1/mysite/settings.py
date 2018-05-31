@@ -55,9 +55,9 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # 프로젝트/settings.py 에 후보지 디렉토리 경로 지정
+        # bizch/ch1/templates
         'DIRS': [
-            os.path.join(BASE_DIR, 'mysite', 'templates')
+            os.path.join(BASE_DIR, 'templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -121,5 +121,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+
+
+
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # bizch/ch1/static
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # bizch/ch1/static 정적 파일 찾기

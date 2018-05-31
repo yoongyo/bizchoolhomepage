@@ -1,10 +1,14 @@
-{% extends "homepage/base.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 <!DOCTYPE html>
 <html>
     <head>
+        {% load staticfiles %}
         <style>            
+            article{
+                clear: both;
+            }
             article #adiv #wrap1{
                 width:68%;
                 margin: 0 auto;
@@ -27,6 +31,7 @@
             }
             article #adiv .과목{
                 text-align: center;
+                clear: both;
             }
             article #adiv .과목 h1{
                 padding-bottom: 30px;
@@ -45,9 +50,19 @@
                 margin: 40px  auto 0 auto;
             }
             article #adiv #공통과목 #공통box div{
+                padding: 20px;
+            }
+            article #adiv #공통과목 #공통box li{
+                list-style: none;
+                text-align: left;
+            }
+            article #adiv #공통과목 #공통box div{
                 border: 1px solid gray;
             }
             article #adiv .과목 #해커톤{
+                background-color: rgb(248,248,248);
+            }
+            article #adiv .과목 #스타트업{
                 background-color: rgb(248,248,248);
             }
         </style>
@@ -65,7 +80,9 @@
                             <li>전공수업</li>
                         </ul>
                     </div>
+                    <div style="clear:both;">
                     <hr>
+                    </div>
                 </div>
                 <div class="과목">
                     <div id="공통과목">
@@ -79,16 +96,26 @@
                         <div id="공통box">
                             <div id="코딩">
                                 <h2>코딩</h2>
-                                <img src="img/성경.png">
+                                <img src="{% static 'img/coding.png' %}" width="60px" hieht="60px">
+                                <dl>
+                                    <li>컴퓨터 구조</li>
+                                    <li>HTML, CSS, Javascipt</li>
+                                    <li>Java, Python, C/C++</li>
+                                    <li>django, Android</li>
+                                    <li>아두이노, 라즈베리파이</li>
+                                </dl>
                             </div>
                             <div id="디자인">
                                 <h2>디자인</h2>
+                                <img src="{% static 'img/design.png' %}" width="60px" hieht="60px">
                             </div>
                             <div id="영어">
                                 <h2>영어</h2>
+                                <img src="{% static 'img/english.png' %}" width="60px" hieht="60px">
                             </div>
                             <div id="성경">
                                 <h2>성경</h2>
+                                <img src="{% static 'img/bible.png' %}" width="60px" hieht="60px">
                             </div>
                         </div>
                     </div>
@@ -109,6 +136,15 @@
                         <p>
                             실무형 중심의 프로젝트를 수행함으로서 돈도 벌고 <br>
                             실무 능력을 쌓는데에 집중한다.
+                        </p>
+                    </div>
+                </div>
+                <div class="과목">
+                    <div id="스타트업">
+                        <h1>스타트업</h1>
+                        <p>
+                            준비된 개발자와 디자이너는 외부 기획자를 섭외해 스타트업을 진행<br>
+                            그리고 스타트업을 장려해주고 지원해준다.
                         </p>
                     </div>
                 </div>
