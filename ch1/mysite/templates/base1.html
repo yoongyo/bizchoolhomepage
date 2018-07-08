@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
+        <!--<link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %}"/>-->
+        <!-- bootstrap -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+        <link href="{% static 'css/bootstrap-responsive.css' %}" rel="stylesheet">
+
+        <style>
+            #nav_bar {
+                background-color: rgb(15,58,114);
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- bootstrap -->
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+        <div id="nav_bar" class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(15,58,114)">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="#">Bizchool</a>
+                    <div class="nav-collapse collapse">
+                    <ul class="nav">
+                      <li class="active"><a href="#">학교소개</a></li>
+                      <li><a href="#about">학교과목</a></li>
+                      <li><a href="#contact">교육목표</a></li>
+                      <li><a href="#">학교안내</a></li>
+                    </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+          <h1>Bootstrap starter template</h1>
+          <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+
+        </div> <!-- /container -->
+        {% block content %}
+
+        {% endblock %}
+
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>::Bizchool 대안학교::</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+    <body>
+        <!-- navbar_top -->
+        <style>
+            .navbar-default{
+                background-color: #0F3A72;
+            }
+            .container-fluid  ul  li{
+                color: white;
+            }
+
+            @media (min-width: 768px){
+                /* 큰 화면 전용 설정 */
+                .container-fluid{
+                    padding:0 20%;
+                }
+                .fcontent {
+                    padding:0 20%;
+                    display: flex;
+                }
+            }
+            @media (max-width: 786px) {
+                .fcontent{
+                    display:flex;
+                }
+            }
+        </style>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button style="border:2px solid #333333;" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#list" aria-expanded="false">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'homepage:home' %}">Bizchool</a>
+                </div>
+                <div class="collapse navbar-collapse" id="list">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{% url 'homepage:introduction' %}">학교안내</a></li>
+                        <li><a href="{% url 'homepage:subject' %}">교과안내</a></li>
+                        <li><a href="{% url 'homepage:news' %}">학교소식</a></li>
+                        <li><a href="{% url 'homepage:entrance' %}">입학안내</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div style="height: 50px">
+
+        </div>
+
+        {% block content %}
+
+        {% endblock %}    
+        {% load static %}
+        <footer style="background-color:#0F3A72">
+                <br>
+                <div class="container" style="display: flex;">
+                    <div style="margin-left:1.5rem;"><img src="{% static 'img/logo1.png' %}" width="100px" height:"100px"></div>
+                    <div style="color:rgb(175, 173, 173); margin-left:1.5rem;"><h5>Bizchool 대안학교<br>위치: 경기도 오산시 고현동 남부대로 427 비즈쿨 대안학교<br>TEL : 663-3399 | Number : 010-9089-3399 | E-mail : jyh8016@hanmail.net <br>Copyright &copy; 2018 by yoongyo.All Right Reserved</h5></div>
+                </div>
+                <br>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    </body>
+</html>
